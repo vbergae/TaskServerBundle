@@ -1,0 +1,30 @@
+task:
+    pattern:  /
+    defaults: { _controller: "VBcomTaskServerBundle:Task:index" }
+
+task_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "VBcomTaskServerBundle:Task:show" }
+
+task_new:
+    pattern:  /new
+    defaults: { _controller: "VBcomTaskServerBundle:Task:new" }
+
+task_create:
+    pattern:  /create
+    defaults: { _controller: "VBcomTaskServerBundle:Task:create" }
+    requirements: { _method: post }
+
+task_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "VBcomTaskServerBundle:Task:edit" }
+
+task_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "VBcomTaskServerBundle:Task:update" }
+    requirements: { _method: post }
+
+task_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "VBcomTaskServerBundle:Task:delete" }
+    requirements: { _method: post }

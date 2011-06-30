@@ -1,0 +1,28 @@
+VBcom\TaskServerBundle\Entity\Task:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    title:
+      type: string
+      length: '255'
+    description:
+      type: text
+      length: '1024'
+    start_date:
+      type: datetime
+      length: null
+    finish_date:
+      type: datetime
+      length: null
+    done:
+      type: boolean
+      length: '1'
+    priority:
+      type: integer
+      length: '1'
+  lifecycleCallbacks: {  }
