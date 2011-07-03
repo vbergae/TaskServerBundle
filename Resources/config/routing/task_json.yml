@@ -1,0 +1,7 @@
+task_index:
+    pattern: /show/all
+    defaults: { _controller: "VBcomTaskServerBundle:Task:indexJson" }
+
+task_show:
+    pattern:  /show/{id}
+    defaults: { _controller: "VBcomTaskServerBundle:Task:showJson" }

@@ -5,7 +5,7 @@ task:
 task_show:
     pattern:  /{id}/show
     defaults: { _controller: "VBcomTaskServerBundle:Task:show" }
-
+    
 task_new:
     pattern:  /new
     defaults: { _controller: "VBcomTaskServerBundle:Task:new" }

@@ -1,3 +1,7 @@
 VBcomTaskServerBundle_task:
     resource: "@VBcomTaskServerBundle/Resources/config/routing/task.yml"
     prefix:   /task
+    
+VBcomTaskServerBundle_task_json:
+    resource: "@VBcomTaskServerBundle/Resources/config/routing/task_json.yml"
+    prefix:   /json/task
