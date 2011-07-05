@@ -1,0 +1,19 @@
+VBcom\TaskServerBundle\Entity\User:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    name:
+      type: string
+      length: '255'
+    password:
+      type: string
+      length: '32'
+    email:
+      type: string
+      length: '255'
+  lifecycleCallbacks: {  }
