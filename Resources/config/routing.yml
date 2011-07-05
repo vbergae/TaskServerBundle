@@ -1,6 +1,6 @@
 VBcomTaskServerBundle_user:
     resource: "@VBcomTaskServerBundle/Resources/config/routing/user.yml"
-    prefix:   /user
+    prefix:   /server/user
 
 VBcomTaskServerBundle_task:
     resource: "@VBcomTaskServerBundle/Resources/config/routing/task.yml"
