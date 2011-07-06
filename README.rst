@@ -11,12 +11,14 @@ Basic Ussage (r1)
 
 API Calls
 ---------
+
 Get all tasks: @yourprefix/api/v1/task/show/all
 
 Get a task with id 5: @yourprefix/api/v1/task/show/5
 
 Server calls
 ------------
+
 Gets Task CRUD: @yourprefix/server/task
 
 Gets User CRUD: @yourprefix/server/user
