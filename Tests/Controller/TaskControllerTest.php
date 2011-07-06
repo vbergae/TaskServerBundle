@@ -6,7 +6,40 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class TaskControllerTest extends WebTestCase
 {
-  
+    public function testAPIShowAll()
+    {
+        $client = static::createClient();
+        
+        $crawler = $client->request('GET', '/api/v1/json/task/show/all');
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+        
+        $content = $client->getResponse()->getContent();
+        $this->assertTrue(substr($content, 0, 1) === '[');
+        $this->assertTrue(substr($content, 3, 2) === 'id');
+        $this->assertTrue(intval(substr($content, 7, 1)) === 1);
+        
+        $this->assertTrue(substr($content,strlen($content) - 1, 1) === ']');
+        $this->assertTrue(substr($content,strlen($content) - 13, 8) === 'priority');
+        $this->assertTrue(intval(substr($content,strlen($content) - 3, 1)) === 0);
+    }
+    
+    public function testAPIShow1()
+    {
+        $client = static::createClient();
+        
+        $crawler = $client->request('GET', '/api/v1/json/task/show/1');
+        $this->assertTrue(200 === $client->getResponse()->getStatusCode());
+        
+        $content = $client->getResponse()->getContent();
+        $this->assertTrue(substr($content, 0, 1) === '{');
+        $this->assertTrue(substr($content, 2, 2) === 'id');
+        $this->assertTrue(intval(substr($content, 6, 1)) === 1);
+        
+        $this->assertTrue(substr($content,strlen($content) - 1, 1) === '}');
+        $this->assertTrue(substr($content,strlen($content) - 12, 8) === 'priority');
+        $this->assertTrue(intval(substr($content,strlen($content) - 2, 1)) === 0);        
+    }
+
     public function testCompleteScenario()
     {
         // Create a new client to browse the application
